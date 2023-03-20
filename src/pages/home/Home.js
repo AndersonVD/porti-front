@@ -3,11 +3,13 @@ import { ChakraProvider, Grid, GridItem, Center } from "@chakra-ui/react";
 import Header from "../../components/header/Header";
 import SearchBar from "../../components/searchbar/SearchBar";
 import Footer from "../../components/footer/Footer";
+import CardItem from "../../components/card/Card";
+import ApiResults from "../../services/Api";
 
 function Home() {
   return (
     <ChakraProvider>
-      <Grid
+      {/* <Grid
         templateAreas={`"header header"
                   "nav main"
                   "nav footer"`}
@@ -22,15 +24,14 @@ function Home() {
           <Header />
         </GridItem>
         <GridItem pl={50} pr={50} pt={100} pb={1} width="50%" area={"main"}>
-          {/* Main */}
           <Center h="70%">
-            <SearchBar />
           </Center>
-        </GridItem>
-        <GridItem pl={4} pr={4} pt={4} pb={4} area={"footer"}>
+          </GridItem>
+          <GridItem pl={4} pr={4} pt={4} pb={4} area={"footer"}>
           <Footer />
-        </GridItem>
-      </Grid>
+          </GridItem>
+        </Grid> */}
+      <SearchBar />
     </ChakraProvider>
   );
 }
